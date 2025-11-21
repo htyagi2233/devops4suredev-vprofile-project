@@ -19,7 +19,6 @@ pipeline {
         SONARSCANNER = 'sonarscanner'
         registryCredential = 'ecr:us-east-1:awscreds'
         appRegistry = '653447837741.dkr.ecr.us-east-1.amazonaws.com/profileappimg'
-      
         vprofileRegistry = 'https://653447837741.dkr.ecr.us-east-1.amazonaws.com'
         cluster = "vproappstaging"
         service = "vprofileapptask-service-7ssodybs"
@@ -99,7 +98,7 @@ pipeline {
             }
         }
 
-         stage('Build App Image') {
+        stage('Build App Image') {
             steps {
                 script {
                     dockerImage = docker.build( appRegistry + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
