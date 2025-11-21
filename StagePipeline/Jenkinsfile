@@ -18,8 +18,9 @@ pipeline {
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
         registryCredential = 'ecr:us-east-1:awscreds'
-        appRegistry = '593793033705.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg'
-        vprofileRegistry = 'https://593793033705.dkr.ecr.us-east-1.amazonaws.com'
+        appRegistry = '653447837741.dkr.ecr.us-east-1.amazonaws.com/profileappimg'
+      
+        vprofileRegistry = 'https://653447837741.dkr.ecr.us-east-1.amazonaws.com'
         cluster = "vproappstaging"
         service = "vprofileapptask-service-7ssodybs"
     }
